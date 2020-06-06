@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @listing.title %>
+</p>
+
+<p>
+  <strong>Thumb img:</strong>
+  <%= @listing.thumb_img %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @listing.address %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @listing.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @listing.lng %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @listing.price %>
+</p>
+
+<p>
+  <strong>Home type:</strong>
+  <%= @listing.home_type_id %>
+</p>
+
+
+<p>
+  <strong>Description:</strong>
+  <%= @listing.description %>
+</p>
+
+<p>
+  <strong>Max guests:</strong>
+  <%= @listing.max_guests %>
+</p>
+
+
+<p>
+  <strong>Photos:</strong>
+  <% (0...@listing.photos.count).each do |photo|%> 
+    <%= image_tag(@listing.thumbnail(photo))%> 
+ <%end%>
+</p>
+
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>

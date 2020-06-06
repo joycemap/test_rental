@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  thumb_img: MyString
+  address: MyText
+  lat: 1.5
+  lng: 1.5
+  price: 1
+  home_type_id: MyString
+  integer: MyString
+  description: MyText
+  max_guests: 1
+  images: MyString
+
+two:
+  title: MyString
+  thumb_img: MyString
+  address: MyText
+  lat: 1.5
+  lng: 1.5
+  price: 1
+  home_type_id: MyString
+  integer: MyString
+  description: MyText
+  max_guests: 1
+  images: MyString

@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Thumb img</th>
+      <th>Address</th>
+      <th>Lat</th>
+      <th>Lng</th>
+      <th>Price</th>
+      <th>Home type</th>
+      <th>Description</th>
+      <th>Max guests</th>
+      <th>Images</th>
+      <th colspan="12"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listings.each do |listing| %>
+      <tr>
+        <td><%= listing.title %></td>
+        <td><%= listing.thumb_img %></td>
+        <td><%= listing.address %></td>
+        <td><%= listing.lat %></td>
+        <td><%= listing.lng %></td>
+        <td><%= listing.price %></td>
+        <td><%= listing.home_type_id %></td>
+
+        <td><%= listing.description %></td>
+        <td><%= listing.max_guests %></td>
+        <td><%= listing.images %></td>
+                <td><%= link_to 'Show', listing %></td>
+        <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if user_signed_in? %>
+<%= link_to 'New Listing', new_listing_path %>
+<% end %>
+
+<br>
+<%= link_to 'Log Out', destroy_user_session_url, method: :delete %>
